@@ -1,36 +1,181 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# WhatBytes Product Listing App
 
-## Getting Started
+A modern e-commerce product listing application built with Next.js, TypeScript, and Tailwind CSS.
 
-First, run the development server:
+## 🚀 Live Demo
+
+**Live URL:** [Deploy to Vercel and add URL here]
+
+## 📋 Features
+
+### ✅ Implemented Features
+
+- **Home Page (/)** - Product Listing
+  - Responsive product grid (3 columns on desktop, 2 on tablet, 1 on mobile)
+  - Product cards with image placeholders, title, price, ratings, and "Add to Cart" button
+  - Sidebar filters for category and price range
+  - Header with logo, search bar, and cart icon with badge
+  - Footer with copyright and social media icons
+
+- **Product Detail Page (/product/[id])**
+  - Dynamic routing for individual products
+  - Product image, title, price, description, and category
+  - Quantity selector with increment/decrement controls
+  - "Add to Cart" functionality
+  - Reviews section (placeholder)
+
+- **Cart Page (/cart)**
+  - List of all added products
+  - Quantity update controls (increase/decrease/remove)
+  - Remove item functionality
+  - Price summary with subtotal, shipping, tax, and total
+  - Empty cart state with call-to-action
+  - Persistent cart using localStorage
+
+### 🔍 Filtering & Search
+
+- **Category Filter**: Filter products by All, Electronics, Clothing, or Home
+- **Price Range Filter**: Slider to filter products by price range (0-1000)
+- **Search**: Search products by title, description, or category
+- **URL-based Filters**: All filters are reflected in URL query parameters
+  - Example: `/?category=electronics&minPrice=100&maxPrice=500&search=phone`
+
+### 🛒 Cart Management
+
+- **React Context API** for state management
+- **localStorage** for cart persistence across sessions
+- Real-time cart count badge in header
+- Add, remove, and update quantities
+- Automatic total price calculation
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 15 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Icons**: lucide-react
+- **State Management**: React Context API
+- **Persistence**: localStorage
+
+## 📦 Installation & Setup
 
 ```bash
+# Clone the repository
+git clone https://github.com/rachit0203/whatbytes-product-listing-app.git
+
+# Navigate to project directory
+cd whatbytes-product-listing-app
+
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Open http://localhost:3000 in your browser
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🏗️ Project Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+whatbytes-product-listing-app/
+├── app/
+│   ├── cart/
+│   │   └── page.tsx           # Cart page
+│   ├── product/
+│   │   └── [id]/
+│   │       └── page.tsx       # Product detail page
+│   ├── layout.tsx             # Root layout
+│   ├── page.tsx               # Home page
+│   └── globals.css            # Global styles
+├── components/
+│   ├── FilterSidebar.tsx      # Category & price filters
+│   ├── Footer.tsx             # Footer component
+│   ├── Header.tsx             # Header with search & cart
+│   └── ProductCard.tsx        # Product card component
+├── context/
+│   └── CartContext.tsx        # Cart state management
+├── lib/
+│   └── data.ts                # Mock product data
+└── public/
+    └── images/                # Product images
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🎯 Features Breakdown
 
-## Learn More
+### Filtering Logic
+- Client-side filtering for instant results
+- Combines category, price, and search filters
+- Conditional rendering for "no results" state
+- Reset filters functionality
 
-To learn more about Next.js, take a look at the following resources:
+### URL-based Filtering
+- Query parameters for shareable URLs
+- Syncs URL with filter state
+- Maintains search state across navigation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Cart Functionality
+- Add items with quantity selection
+- Update quantities from cart page
+- Remove individual items or clear cart
+- Persistent across browser sessions
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📱 Responsive Design
 
-## Deploy on Vercel
+- **Desktop** (lg): 3-column grid, full sidebar
+- **Tablet** (md): 2-column grid, collapsible sidebar
+- **Mobile** (sm): 1-column grid, stacked layout
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🚢 Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is ready to be deployed on Vercel:
+
+```bash
+# Install Vercel CLI
+npm i -g vercel
+
+# Deploy
+vercel
+```
+
+Or use the Vercel Dashboard:
+1. Push your code to GitHub
+2. Import project in Vercel
+3. Deploy with default settings
+
+## 📝 Git Commit History
+
+This project follows best practices with incremental, feature-based commits:
+
+1. Initial Next.js setup with TypeScript and Tailwind CSS
+2. Add product data, Header, and Footer components
+3. Implement product listing page with responsive grid and product cards
+4. Add sidebar filters with category and price range filtering
+5. Add search functionality and URL-based filtering
+6. Add cart context with localStorage persistence
+7. Add product detail page with quantity selector
+8. Add cart page with quantity controls and price summary
+9. Update README and final polish
+
+## 🎨 Design Attention to Detail
+
+- Matched the provided design mockup
+- Blue color scheme (#0A3D7A for header, #1976D2 for buttons)
+- Proper spacing and typography
+- Hover states and transitions
+- Rating stars with half-star support
+- Cart badge with item count
+
+## 📄 License
+
+MIT License - feel free to use this project for learning or portfolio purposes.
+
+## 👤 Author
+
+**Rachit**
+- GitHub: [@rachit0203](https://github.com/rachit0203)
+
+---
+
+**Note**: After deploying to Vercel, update the "Live Demo" section with your deployment URL.
+
