@@ -20,7 +20,7 @@ export default function CartPage() {
           </p>
           <Link
             href="/"
-            className="inline-block bg-[#1976D2] hover:bg-[#1565C0] text-white py-3 px-8 rounded-lg font-semibold transition-colors"
+            className="inline-block bg-[#1976D2] hover:bg-[#1565C0] text-white py-3 px-8 rounded-lg font-semibold transition-colors cursor-pointer"
           >
             Continue Shopping
           </Link>
@@ -64,14 +64,14 @@ export default function CartPage() {
                 <div className="flex items-center gap-2">
                   <button
                     onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                    className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-100 flex items-center justify-center"
+                    className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-100 flex items-center justify-center cursor-pointer"
                   >
                     <Minus className="w-4 h-4" />
                   </button>
                   <span className="w-12 text-center font-semibold">{item.quantity}</span>
                   <button
                     onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                    className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-100 flex items-center justify-center"
+                    className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-100 flex items-center justify-center cursor-pointer"
                   >
                     <Plus className="w-4 h-4" />
                   </button>
@@ -79,7 +79,7 @@ export default function CartPage() {
 
                 <button
                   onClick={() => removeFromCart(item.id)}
-                  className="text-red-600 hover:text-red-700 p-2"
+                  className="text-red-600 hover:text-red-700 p-2 cursor-pointer"
                   title="Remove item"
                 >
                   <Trash2 className="w-5 h-5" />
@@ -90,7 +90,7 @@ export default function CartPage() {
 
           <button
             onClick={clearCart}
-            className="text-red-600 hover:text-red-700 text-sm underline"
+            className="text-red-600 hover:text-red-700 text-sm underline cursor-pointer"
           >
             Clear entire cart
           </button>
@@ -122,12 +122,12 @@ export default function CartPage() {
               </div>
             </div>
 
-            <button className="w-full bg-[#1976D2] hover:bg-[#1565C0] text-white py-3 px-6 rounded-lg font-semibold transition-colors mb-3">
+            <button className="w-full bg-[#1976D2] hover:bg-[#1565C0] text-white py-3 px-6 rounded-lg font-semibold transition-colors mb-3 cursor-pointer">
               Proceed to Checkout
             </button>
 
             <Link href="/">
-              <button className="w-full border border-gray-300 hover:bg-gray-50 text-gray-700 py-3 px-6 rounded-lg font-semibold transition-colors">
+              <button className="w-full border border-gray-300 hover:bg-gray-50 text-gray-700 py-3 px-6 rounded-lg font-semibold transition-colors cursor-pointer">
                 Continue Shopping
               </button>
             </Link>

@@ -61,7 +61,7 @@ export default function ProductCard({ product, onAddToCart }: ProductCardProps) 
           <p className="text-xl font-bold text-gray-900">${product.price}</p>
           <button
             onClick={() => onAddToCart(product)}
-            className="bg-[#1976D2] hover:bg-[#1565C0] text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+            className="bg-[#1976D2] hover:bg-[#1565C0] text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors cursor-pointer"
           >
             Add to Cart
           </button>

@@ -68,7 +68,7 @@ export default function ProductDetail() {
     <div className="container mx-auto px-4 py-8">
       <button
         onClick={() => router.back()}
-        className="flex items-center gap-2 text-blue-600 hover:text-blue-700 mb-6"
+        className="flex items-center gap-2 text-blue-600 hover:text-blue-700 mb-6 cursor-pointer"
       >
         <ArrowLeft className="w-4 h-4" />
         Back
@@ -113,7 +113,7 @@ export default function ProductDetail() {
               <div className="flex items-center gap-3">
                 <button
                   onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                  className="w-10 h-10 rounded-lg border border-gray-300 hover:bg-gray-100 flex items-center justify-center font-semibold"
+                  className="w-10 h-10 rounded-lg border border-gray-300 hover:bg-gray-100 flex items-center justify-center font-semibold cursor-pointer"
                 >
                   -
                 </button>
@@ -126,7 +126,7 @@ export default function ProductDetail() {
                 />
                 <button
                   onClick={() => setQuantity(quantity + 1)}
-                  className="w-10 h-10 rounded-lg border border-gray-300 hover:bg-gray-100 flex items-center justify-center font-semibold"
+                  className="w-10 h-10 rounded-lg border border-gray-300 hover:bg-gray-100 flex items-center justify-center font-semibold cursor-pointer"
                 >
                   +
                 </button>
@@ -135,7 +135,7 @@ export default function ProductDetail() {
 
             <button
               onClick={handleAddToCart}
-              className="bg-[#1976D2] hover:bg-[#1565C0] text-white py-3 px-8 rounded-lg text-lg font-semibold transition-colors"
+              className="bg-[#1976D2] hover:bg-[#1565C0] text-white py-3 px-8 rounded-lg text-lg font-semibold transition-colors cursor-pointer"
             >
               Add to Cart
             </button>
