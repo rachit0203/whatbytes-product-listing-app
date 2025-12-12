@@ -6,12 +6,13 @@ import { products } from "@/lib/data";
 import ProductCard from "@/components/ProductCard";
 import FilterSidebar from "@/components/FilterSidebar";
 import { Product } from "@/lib/data";
+import { useCart } from "@/context/CartContext";
 
 export default function Home() {
   const router = useRouter();
   const searchParams = useSearchParams();
+  const { addToCart } = useCart();
   
-  const [cartItems, setCartItems] = useState<Product[]>([]);
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [priceRange, setPriceRange] = useState([0, 1000]);
 
@@ -57,8 +58,7 @@ export default function Home() {
   };
 
   const handleAddToCart = (product: Product) => {
-    setCartItems((prev) => [...prev, product]);
-    alert(`${product.title} added to cart!`);
+    addToCart(product);
   };
 
   // Filter products based on category, price, and search
