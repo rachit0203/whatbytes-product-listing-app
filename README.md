@@ -4,7 +4,7 @@ A modern e-commerce product listing application built with Next.js, TypeScript, 
 
 ## 🚀 Live Demo
 
-**Live URL:** [Deploy to Vercel and add URL here]
+**Live URL:** (https://whatbytes-product-listing-app.vercel.app/)
 
 ## 📋 Features
 
@@ -166,16 +166,9 @@ This project follows best practices with incremental, feature-based commits:
 - Rating stars with half-star support
 - Cart badge with item count
 
-## 📄 License
-
-MIT License - feel free to use this project for learning or portfolio purposes.
-
 ## 👤 Author
 
 **Rachit**
 - GitHub: [@rachit0203](https://github.com/rachit0203)
 
 ---
-
-**Note**: After deploying to Vercel, update the "Live Demo" section with your deployment URL.
-
